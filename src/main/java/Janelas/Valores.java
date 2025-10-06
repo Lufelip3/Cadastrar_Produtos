@@ -5,6 +5,7 @@
 package Janelas;
 
 import com.mycompany.cadastrar_produtos.Cadastrar_Produtos;
+//importação da classe Cadastrar_Produtos
 
 /**
  *
@@ -109,9 +110,9 @@ public class Valores extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jFPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -121,14 +122,20 @@ public class Valores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Método que trata o evento de clique no botão "Cadastrar"
+        // Cria uma nova instância de Cadastrar_Produtos com os dados inseridos nos campos do formulário
         Cadastrar_Produtos a = new Cadastrar_Produtos(
-                jFNome.getText(),
-                jFDescricao.getText(),
-                Double.parseDouble(jFPreco.getText()),
-                Integer.parseInt(jFQuantidade.getText())
+                jFNome.getText(), // Obtém o texto do campo de nome
+                jFDescricao.getText(), // Obtém o texto do campo de descrição
+                Double.parseDouble(jFPreco.getText()), // Converte o texto do campo de preço para double
+                Integer.parseInt(jFQuantidade.getText()) // Converte o texto do campo de quantidade para int
         );
+        // Cria uma nova janela Resultado, passando o objeto 'a' como parâmetro
         Resultado r = new Resultado(a);
+        // Torna a janela Resultado visível
         r.setVisible(true);
+
+        // Centraliza a janela Resultado em relação à janela atual
         r.setLocationRelativeTo(this);
     }//GEN-LAST:event_jButton1ActionPerformed
 

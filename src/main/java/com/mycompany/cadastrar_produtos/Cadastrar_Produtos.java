@@ -7,13 +7,16 @@ package com.mycompany.cadastrar_produtos;
  *
  * @author luis.fmleite
  */
+// Declaração da classe pública Cadastrar_Produtos, que representa um modelo de dados para um produto
 public class Cadastrar_Produtos {
+// Atributos privados da classe, seguindo o princípio de encapsulamento
 
-    private String nome;
-    private String descrição;
-    private int quantidade;
-    private double preco;
+    private String nome;         // Nome do produto
+    private String descrição;    // Descrição do produto
+    private int quantidade;      // Quantidade disponível
+    private double preco;        // Preço unitário
 
+    // Construtor público que inicializa os atributos com os valores recebidos
     public Cadastrar_Produtos(String nome, String descrição, double preco, int quantidade) {
         this.nome = nome;
         this.descrição = descrição;

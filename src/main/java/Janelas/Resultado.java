@@ -5,6 +5,7 @@
 package Janelas;
 
 import com.mycompany.cadastrar_produtos.Cadastrar_Produtos;
+//importação da classe Cadastrar_Produtos
 
 /**
  *
@@ -18,13 +19,23 @@ public class Resultado extends javax.swing.JFrame {
     public Resultado() {
         initComponents();
     }
+    // Construtor da classe Resultado que recebe um objeto do tipo Cadastrar_Produtos
+
     public Resultado(Cadastrar_Produtos CP) {
-        
+
+        // Inicializa os componentes da interface gráfica (gerado pelo GUI Builder)
         initComponents();
-       
+
+        // Define o texto do JLabel jLNomeR com o nome do produto recebido
         jLNomeR.setText(CP.getNome());
+
+        // Define o texto do JLabel jLDescricaoR com a descrição do produto
         jLDescricaoR.setText(CP.getDescrição());
+
+        // Converte o valor inteiro da quantidade para String e exibe no JLabel correspondente
         jLQuantidadeR.setText(String.valueOf(CP.getQuantidade()));
+
+        // Converte o valor double do preço para String e exibe no JLabel correspondente
         jLPrecoR.setText(String.valueOf(CP.getPreco()));
     }
 
@@ -138,6 +149,7 @@ public class Resultado extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
+        //Fecha janela
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
